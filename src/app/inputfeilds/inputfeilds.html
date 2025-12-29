@@ -1,0 +1,108 @@
+
+<!-- <button (click)="hide()">click me</button>
+@if(display){
+    
+<div style="width: 80px; height: 80px; background-color: green;"></div>
+
+} -->
+<!-- <div></div> -->
+
+ <!-- color = 2;
+  handleColorChange(val: number) {
+    this.color = val;
+  }
+  handleInput(event: Event) {
+    this.color = parseInt((event.target as HTMLInputElement).value);
+  } -->
+
+
+<!-- 
+<button (click)="handleColorChange(1)" value="1">red</button>
+<button (click)="handleColorChange(2)" value="2">blue</button>
+<button (click)="handleColorChange(3)" value="3">green</button>
+<button (click)="handleColorChange(4)" value="4">yellow</button>
+<input type="text" (input)="handleInput($event)" placeholder="Enter color number">
+@if(color==1){
+    <div style="width: 80px; height: 80px; background-color: red;"></div>
+}
+@else if(color==2){
+    <div style="width: 80px; height: 80px; background-color: blue;"></div>
+}
+@else if(color==3){
+    <div style="width: 80px; height: 80px; background-color: green;"></div>
+}
+@else if(color==4){
+    <div style="width: 80px; height: 80px; background-color: yellow;"></div>
+}        -->
+
+
+
+<!-- <div></div> -->
+  <!-- users = ['yashu', 'rahul', 'sachin', 'rohit'];
+  students = [
+    { name: 'yashu', age: 20, email: 'yashu@example.com' },
+    { name: 'rahul', age: 22, email: 'rahul@example.com' },
+    { name: 'sachin', age: 21, email: 'sachin@example.com' },
+    { name: 'rohit', age: 23, email: 'rohit@example.com' },
+  ];
+  getName(name: string) {
+    console.log('Name:', name);
+  } -->
+ <!-- @for(item of users;track item){
+    <h2>{{item}}</h2>
+ }
+ <hr>
+
+ @for(item of students; track item;let id = $index){
+    <h2>Index: {{id+1}}</h2>
+    <h2>Name: {{item.name}}</h2>
+    <h3>Age: {{item.age}}</h3>
+    <h4>Email: {{item.email}}</h4>
+    <button (click)="getName(item.name)">Get Name</button>
+    <hr>
+    
+ } -->
+
+ <!-- <div></div> -->
+
+ <!-- <div>
+<h1>{{count()}}</h1>
+<h1>{{x}}</h1> -->
+<!-- <button (click)="count.set(100)">Increment signal</button>
+<button (click)="count.set(x)">Increment property</button> -->
+
+<!-- <button (click)="updateValue()">updateValue</button>
+ count = signal(10);
+  x = 20;
+  constructor() {
+    effect(() => {
+      console.log('Count value changed:', this.count());
+    });
+  }
+
+  updateValue() {
+    // this.count.set(this.count() + 1);
+    this.x += 1;
+  }
+
+
+ </div> -->
+
+<!-- <div></div> -->
+
+<h1>To-Do-List</h1>
+<input type="text" [(ngModel)]="task" placeholder="Enter a task">
+<button (click)="addTask()">Add Task</button>
+<!-- <h1>{{task}}</h1> -->
+
+@for(item of taskList; track item.id; let i = $index){
+  <ul class="task-list">
+    <li> {{item.id}}</li>
+
+    <li>{{item.task}}</li> 
+    <li> <button (click)="taskList.splice(i,1)">Delete</button></li>
+    
+
+  </ul>
+   
+}

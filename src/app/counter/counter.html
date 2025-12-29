@@ -1,0 +1,10 @@
+<p>counter works!Yashu</p>
+<h1>Counter App</h1>
+<div style="text-align: center;">
+    <h2 class="count">{{count}}</h2>
+    <div>
+        <button (click)="handleCounter('plus')"  class="btn bg-red">Increment</button>
+        <button (click)="handleCounter('minus')"  [disabled]="count === 0" class="btn bg-blue">Decrement</button>
+        <button (click)="handleCounter('reset')" class="btn bg-green">Reset</button>
+    </div>
+</div>

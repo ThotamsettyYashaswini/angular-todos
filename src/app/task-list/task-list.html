@@ -1,0 +1,9 @@
+<ul>
+    @for (task of tasks; track task.id) {
+        <li>
+            {{task.id}}
+            {{task.title}} -
+            {{task.completed ? 'Completed' : 'Pending'}}    
+        </li>
+    }
+</ul>
