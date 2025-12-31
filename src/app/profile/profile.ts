@@ -8,7 +8,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrl: './profile.css',
 })
 export class Profile {
-  userName: string | null = '';
+  userName1: string | null = '';
   constructor(private route: ActivatedRoute) {}
   ngOnInit() {
     // // this.userName = this.route.snapshot.paramMap.get('name');
@@ -17,7 +17,7 @@ export class Profile {
     //   this.userName = params.get('name');
     // });
     this.route.data.subscribe((data) => {
-      this.userName = data['name'];
+      this.userName1 = data['name'];
     });
   }
 }

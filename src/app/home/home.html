@@ -1,5 +1,15 @@
-<p>home Page</p>
+<p>home Page user List</p>
 <!-- <a [routerLink]="['/profile', {name:'Yashu'}]">Go to Profile</a> -->
 <!-- <button (click)="goToProfile('yashu')">Go to Profile</button>
 <button (click)="goToProfile('raja')">Go to Profile</button> -->
-<a [routerLink]="'/profile'">Go to Profile</a>
+<!-- <a [routerLink]="'/profile'">Go to Profile</a> -->
+<ul>
+    @for(user of users; track user.id) {
+    <li>
+        <a [routerLink]="['/user', user.id, user.name]">
+            {{ user.name }}
+        </a>
+
+    </li>
+    }
+</ul>
