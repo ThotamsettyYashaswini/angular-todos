@@ -6,6 +6,8 @@ import { Home } from './home/home';
 import { PageNotFound } from './page-not-found/page-not-found';
 import { Profile } from './profile/profile';
 import { User } from './user/user';
+import { AddUser } from './add-user/add-user';
+import { EditUser } from './edit-user/edit-user';
 
 export const routes: Routes = [
   { path: 'counter', component: Counter },
@@ -13,6 +15,8 @@ export const routes: Routes = [
   { path: 'inputfeilds', component: Inputfeilds },
   { path: 'home', component: Home },
   { path: 'profile', component: Profile, data: { name: 'Yashu' } },
-  { path: 'user/:id/:name', component: User },
+  { path: 'users', component: User },
+  { path: 'add-user', component: AddUser },
+  { path: 'edit-user/:id', component: EditUser },
   { path: '**', component: PageNotFound },
 ];

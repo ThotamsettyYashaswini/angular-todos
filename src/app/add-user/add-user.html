@@ -1,0 +1,40 @@
+<div class="overlay">
+    <div class="card">
+        <h2>Add New User</h2>
+
+        <form #f="ngForm" (ngSubmit)="saveUser(f)">
+            <div class="field">
+                <label>Name</label>
+                <input name="name" [(ngModel)]="user.name" required />
+            </div>
+
+            <div class="field">
+                <label>Email</label>
+                <input name="email" [(ngModel)]="user.email" required email />
+            </div>
+
+            <div class="field">
+                <label>Phone</label>
+                <input name="phone" [(ngModel)]="user.phone" />
+            </div>
+
+            <div class="field">
+                <label>Username</label>
+                <input name="username" [(ngModel)]="user.username" required />
+            </div>
+
+            <div class="field">
+                <label>Company</label>
+                <input name="company" [(ngModel)]="user.company.name" />
+            </div>
+
+            <button type="submit" [disabled]="saving">
+                {{ saving ? 'Saving...' : 'Save User' }}
+            </button>
+        </form>
+    </div>
+</div>
+
+<div class="popup" *ngIf="showPopup">
+    ✅ User Saved Successfully
+</div>

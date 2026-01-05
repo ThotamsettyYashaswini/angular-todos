@@ -1,1 +1,25 @@
-<p>Welcome User ID: {{ userId }}</p>
+<div class="container">
+    <h2>User Management</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Company</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let u of users">
+                <td>{{ u.name }}</td>
+                <td>{{ u.email }}</td>
+                <td>{{ u.company?.name }}</td>
+                <td>
+                    <button (click)="editUser(u.id)">Edit</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
